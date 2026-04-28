@@ -1,14 +1,6 @@
 #pragma once
 
-#include "main.hpp"
-#include "constants.hpp"
-#include <string>
-#include <vector>
-#include "ModConfig.hpp"
 #include "bsml/shared/BSML/FloatingScreen/FloatingScreen.hpp"
-#include "bsml/shared/BSML.hpp"
-#include "bsml/shared/BSML-Lite.hpp"
-#include "UnityEngine/Vector3.hpp"
 #include "UnityEngine/Vector2.hpp"
 
 namespace CustomMenu::Banners {

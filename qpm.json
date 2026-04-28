@@ -45,25 +45,21 @@
       "./extern/libs"
     ],
     "qmodIncludeFiles": [],
-    "qmodOutput": "./Qustom Menu.qmod"
+    "qmodOutput": "./Qustom Menu.qmod",
+    "ndk": "^27.3.13750724"
   },
   "dependencies": [
     {
       "id": "scotland2",
-      "versionRange": "^0.1.4",
+      "versionRange": "^0.1.6",
       "additionalData": {
         "includeQmod": false,
         "private": true
       }
     },
     {
-      "id": "paper",
-      "versionRange": "^3.6.3",
-      "additionalData": {}
-    },
-    {
       "id": "bsml",
-      "versionRange": "^0.4.42",
+      "versionRange": "^0.4.55",
       "additionalData": {}
     },
     {
@@ -73,22 +69,34 @@
     },
     {
       "id": "config-utils",
-      "versionRange": "^1.4.2",
+      "versionRange": "^2.0.3",
       "additionalData": {}
     },
     {
       "id": "custom-types",
-      "versionRange": "^0.17.8",
+      "versionRange": "^0.18.4",
       "additionalData": {}
     },
     {
       "id": "kaleb",
       "versionRange": "^0.1.9",
-      "additionalData": {}
+      "additionalData": {
+        "private": true
+      }
     },
     {
       "id": "beatsaber-hook",
-      "versionRange": "^5.1.9",
+      "versionRange": "^6.4.2",
+      "additionalData": {}
+    },
+    {
+      "id": "bs-cordl",
+      "versionRange": "4008.*",
+      "additionalData": {}
+    },
+    {
+      "id": "paper2_scotland2",
+      "versionRange": "^4.7.0",
       "additionalData": {}
     }
   ]

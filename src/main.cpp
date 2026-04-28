@@ -1,5 +1,6 @@
 #include "main.hpp"
 
+#include "logging.hpp"
 #include "scotland2/shared/modloader.h"
 #include "ModConfig.hpp"
 #include "bsml/shared/BSML.hpp"
@@ -12,6 +13,10 @@
 #include "Banners/FileParser.hpp"
 #include "Banners/Banners.hpp"
 #include "Tweaks/Logo.hpp"
+#include "beatsaber-hook/shared/utils/hooking.hpp"
+#include "beatsaber-hook/shared/utils/il2cpp-functions.hpp"
+#include "_config.hpp"
+#include "GlobalNamespace/MainMenuViewController.hpp"
 
 
 static modloader::ModInfo modInfo{MOD_ID, VERSION, 0};
@@ -34,9 +39,9 @@ MOD_EXTERN_FUNC void setup(CModInfo *info) noexcept {
   getModConfig().Init(modInfo);
 
   // File logging
-  Paper::Logger::RegisterFileContextId(PaperLogger.tag);
+  Paper::Logger::RegisterFileContextId(Logger.tag);
 
-  PaperLogger.info("Completed setup!");
+  INFO("Completed setup!");
 }
 
 custom_types::Helpers::Coroutine textScaler(HMUI::CurvedTextMeshPro* text) {
@@ -87,7 +92,7 @@ MAKE_HOOK_MATCH(MainMenuViewController_DidActivate, &GlobalNamespace::MainMenuVi
             }
 
             std::string quote = CustomMenu::Quotes::GetRandomQuote();
-            PaperLogger.info("Quote: {0}", quote.c_str());
+            INFO("Quote: {0}", quote.c_str());
 
             UnityEngine::Color color = getModConfig().quote_color.GetValue();
 
@@ -123,7 +128,7 @@ MOD_EXTERN_FUNC void late_load() noexcept {
   CustomMenu::Banners::parseFiles();
 
   BSML::Register::RegisterMainMenu("Qustom Menu", "Qustom Menu Settings", "Configure the Settings for Qustom Menu", DidActivate);
-  PaperLogger.info("Installing hooks...");
-  INSTALL_HOOK(PaperLogger, MainMenuViewController_DidActivate);
-  PaperLogger.info("Installed all hooks!");
+  INFO("Installing hooks...");
+  INSTALL_HOOK(Logger, MainMenuViewController_DidActivate);
+  INFO("Installed all hooks!");
 }

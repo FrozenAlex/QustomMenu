@@ -1,6 +1,10 @@
 #include "Banners/Banners.hpp"
 #include "Banners/FileParser.hpp"
 #include "constants.hpp"
+#include "constants.hpp"
+#include <string>
+#include "ModConfig.hpp"
+#include "UnityEngine/Vector3.hpp"
 #include "bsml/shared/BSML-Lite/Creation/Image.hpp"
 
 

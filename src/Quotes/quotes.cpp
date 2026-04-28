@@ -1,11 +1,7 @@
 #include "Quotes/quotes.hpp"
 #include <fstream>
-#include "bsml/shared/BSML.hpp"
-#include "bsml/shared/BSML-Lite.hpp"
-#include "UnityEngine/GameObject.hpp"
-#include "HMUI/Touchable.hpp"
-#include "UnityEngine/Vector2.hpp"
-#include "UnityEngine/Space.hpp"
+#include "constants.hpp"
+#include <filesystem>
 
 namespace CustomMenu::Quotes {
     void LoadQuotes() {

@@ -4,11 +4,9 @@
 #include "constants.hpp"
 #include <string>
 #include <vector>
-#include <fstream>
 #include "UnityEngine/Sprite.hpp"
 #include "bsml/shared/BSML-Lite/Creation/Image.hpp"
-#include "main.hpp"
-
+#include "logging.hpp"
 namespace CustomMenu::Banners {
     static std::vector<std::string> bannerFiles;
 
@@ -28,10 +26,10 @@ namespace CustomMenu::Banners {
         std::string path = Constants::BannerFolder;
         bannerFiles.clear();
 
-        PaperLogger.info("Parsing files in: {0}", path.c_str());
+        INFO("Parsing files in: {}", path.c_str());
 
         for (const auto& entry : std::filesystem::directory_iterator(path)) {
-            PaperLogger.info("Found file: {0}", entry.path().string().c_str());
+            INFO("Found file: {}", entry.path().string().c_str());
             if (entry.is_regular_file()) {
                 std::string filePath = entry.path().string();
                 std::string extension = entry.path().extension().string();
@@ -40,7 +38,7 @@ namespace CustomMenu::Banners {
                 if (extension == ".png" || extension == ".jpg") {
                     std::string fileName = entry.path().filename().string();
                     bannerFiles.push_back(fileName);
-                    PaperLogger.info("Added file: {0}", fileName.c_str());
+                    INFO("Added file: {}", fileName.c_str());
                 }
             }
         }
