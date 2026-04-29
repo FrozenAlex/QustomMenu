@@ -1,3 +1,4 @@
+#!/usr/bin/env pwsh
 Param(
     [Parameter(Mandatory=$false)]
     [Switch] $clean,
@@ -7,6 +8,9 @@ Param(
 
     [Parameter(Mandatory=$false)]
     [Switch] $useDebug,
+
+    [Parameter(Mandatory=$false)]
+    [Switch]$release,
 
     [Parameter(Mandatory=$false)]
     [Switch] $self,
@@ -39,7 +43,7 @@ if ($help -eq $true) {
     exit
 }
 
-& $PSScriptRoot/build.ps1 -clean:$clean
+& $PSScriptRoot/build.ps1 -clean:$clean -release:$release
 
 if ($LASTEXITCODE -ne 0) {
     Write-Output "Failed to build, exiting..."

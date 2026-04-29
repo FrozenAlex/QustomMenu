@@ -29,7 +29,7 @@
           "pwsh ./scripts/start-logging.ps1"
         ],
         "qmod": [
-          "pwsh ./scripts/build.ps1",
+          "pwsh ./scripts/build.ps1 -release",
           "qpm qmod zip --skip_build"
         ],
         "restart": [
