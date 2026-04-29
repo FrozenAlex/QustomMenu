@@ -56,7 +56,6 @@ if ($all -eq $false) {
 if ($all -eq $false) {
     $pattern = "("
     if ($self -eq $true) {
-        & $PSScriptRoot/validate-modjson.ps1
         $modID = (Get-Content "./mod.json" -Raw | ConvertFrom-Json).id
         $pattern += "$modID|"
     }

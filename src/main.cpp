@@ -106,7 +106,7 @@ MAKE_HOOK_MATCH(MainMenuViewController_DidActivate, &GlobalNamespace::MainMenuVi
             QuoteText->GetComponent<UnityEngine::RectTransform*>()->set_sizeDelta({ 1840, 300 });
             QuoteText->set_fontStyle(TMPro::FontStyles::Bold);
 
-            BSML::SharedCoroutineStarter::StartCoroutine(textScaler(QuoteText));
+            // BSML::SharedCoroutineStarter::StartCoroutine(textScaler(QuoteText));
         }
 
 

@@ -2,6 +2,7 @@
 #include <fstream>
 #include "constants.hpp"
 #include <filesystem>
+#include <vector>
 
 namespace CustomMenu::Quotes {
     std::vector<std::string> quotes = {
@@ -35,14 +36,20 @@ namespace CustomMenu::Quotes {
     void LoadCustomQuotes() {
         std::string path = Constants::QuotePath;
         std::ifstream file(path);
+        std::vector<std::string> tempQuotes;
         if (file.is_open()) {
             std::string line;
             while (std::getline(file, line)) {
-                customQuotes.push_back(line);
+                tempQuotes.push_back(line);
             }
             file.close();
         }
-        selectedQuotes = customQuotes;
+
+        if (tempQuotes.empty()) {
+            selectedQuotes = customQuotes;
+        } else {
+            selectedQuotes = std::move(tempQuotes);
+        }
     }
 
     std::string GetRandomQuote() {
