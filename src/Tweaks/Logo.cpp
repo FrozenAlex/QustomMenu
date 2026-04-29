@@ -1,6 +1,7 @@
 #include "Tweaks/Logo.hpp"
 
 namespace CustomMenu::Tweaks::Logo {
+    SafePtrUnity<UnityEngine::GameObject> logo;
 
     void onLoad() {
         logo = UnityEngine::GameObject::Find("Logo");

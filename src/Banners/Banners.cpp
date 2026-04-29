@@ -9,6 +9,11 @@
 
 
 namespace CustomMenu::Banners {
+    SafePtrUnity<BSML::FloatingScreen> leftBanner = nullptr;
+    SafePtrUnity<BSML::FloatingScreen> rightBanner = nullptr;
+
+    UnityEngine::Vector2 defaultScale = { 120, 240 };
+    UnityEngine::Vector2 defaultImageScale = { 200.0f, 400.0f };
 
     void LoadBanners() {
         UnityEngine::Vector3 leftBannerPositon = getModConfig().left_banner_position.GetValue();
@@ -40,14 +45,14 @@ namespace CustomMenu::Banners {
             rightBannerFile = "default.png";
         }
 
-        UnityEngine::Sprite* leftBannerSprite = CustomMenu::Banners::readFileAsSprite(leftBannerFile);
-        UnityEngine::Sprite* rightBannerSprite = CustomMenu::Banners::readFileAsSprite(rightBannerFile);
+        UnityW<UnityEngine::Sprite> leftBannerSprite = CustomMenu::Banners::readFileAsSprite(leftBannerFile);
+        UnityW<UnityEngine::Sprite> rightBannerSprite = CustomMenu::Banners::readFileAsSprite(rightBannerFile);
 
-        if (leftBannerSprite == nullptr) {
+        if (!leftBannerSprite) {
             leftBannerSprite = BSML::Lite::Base64ToSprite(Constants::base64ErrorSprite);
         }
 
-        if (rightBannerSprite == nullptr) {
+        if (!rightBannerSprite) {
             rightBannerSprite = BSML::Lite::Base64ToSprite(Constants::base64ErrorSprite);
         }
 
@@ -57,11 +62,11 @@ namespace CustomMenu::Banners {
 
     void ReloadBanners() {
         // delete old banners
-        if (leftBanner != nullptr) {
+        if (leftBanner) {
             UnityEngine::Object::Destroy(leftBanner->get_gameObject());
         }
 
-        if (rightBanner != nullptr) {
+        if (rightBanner) {
             UnityEngine::Object::Destroy(rightBanner->get_gameObject());
         }
 

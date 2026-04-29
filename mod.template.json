@@ -9,7 +9,7 @@
   "packageVersion": "1.40.8_7379",
   "description": "Customise the Beat Saber menu",
   "dependencies": [],
-  "modFiles": ["${binary}"],
+  "lateModFiles": ["${binary}"],
   "libraryFiles": [],
   "fileCopies": [
     {

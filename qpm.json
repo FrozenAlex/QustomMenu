@@ -78,13 +78,6 @@
       "additionalData": {}
     },
     {
-      "id": "kaleb",
-      "versionRange": "^0.1.9",
-      "additionalData": {
-        "private": true
-      }
-    },
-    {
       "id": "beatsaber-hook",
       "versionRange": "^6.4.2",
       "additionalData": {}

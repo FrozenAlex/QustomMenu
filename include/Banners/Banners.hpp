@@ -4,11 +4,11 @@
 #include "UnityEngine/Vector2.hpp"
 
 namespace CustomMenu::Banners {
-    static BSML::FloatingScreen* leftBanner = nullptr;
-    static BSML::FloatingScreen* rightBanner = nullptr;
+    extern SafePtrUnity<BSML::FloatingScreen> leftBanner;
+    extern SafePtrUnity<BSML::FloatingScreen> rightBanner;
 
-    static UnityEngine::Vector2 defaultScale = { 120, 240 };
-    static UnityEngine::Vector2 defaultImageScale = { 200.0f, 400.0f };
+    extern UnityEngine::Vector2 defaultScale;
+    extern UnityEngine::Vector2 defaultImageScale;
 
     void LoadBanners();
     void ReloadBanners();

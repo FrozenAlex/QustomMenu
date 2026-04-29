@@ -80,13 +80,6 @@
         "additionalData": {}
       },
       {
-        "id": "kaleb",
-        "versionRange": "^0.1.9",
-        "additionalData": {
-          "private": true
-        }
-      },
-      {
         "id": "beatsaber-hook",
         "versionRange": "^6.4.2",
         "additionalData": {}
@@ -301,23 +294,6 @@
         }
       },
       "version": "0.1.7"
-    },
-    {
-      "dependency": {
-        "id": "kaleb",
-        "versionRange": "=0.1.9",
-        "additionalData": {
-          "headersOnly": true,
-          "branchName": "version/v0_1_9",
-          "compileOptions": {
-            "cppFlags": [
-              "-DKALEB_VERSION=\"0.1.9\""
-            ]
-          },
-          "cmake": false
-        }
-      },
-      "version": "0.1.9"
     }
   ]
 }
