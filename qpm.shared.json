@@ -49,7 +49,7 @@
         "./assets"
       ],
       "qmodIncludeFiles": [],
-      "qmodOutput": "./Qustom Menu.qmod"
+      "qmodOutput": "./QustomMenu.qmod"
     },
     "dependencies": [
       {

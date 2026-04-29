@@ -46,7 +46,7 @@
       "./assets"
     ],
     "qmodIncludeFiles": [],
-    "qmodOutput": "./Qustom Menu.qmod",
+    "qmodOutput": "./QustomMenu.qmod",
     "ndk": "^27.3.13750724"
   },
   "dependencies": [

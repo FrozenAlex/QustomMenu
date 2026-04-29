@@ -38,7 +38,7 @@ permissions:
 
 env:
     module_id: "qustommenu"
-    qmod_name: "Qustom Menu"
+    qmod_name: "QustomMenu"
 
 jobs:
   build:
