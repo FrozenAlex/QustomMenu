@@ -42,7 +42,8 @@
     },
     "qmodIncludeDirs": [
       "./build",
-      "./extern/libs"
+      "./extern/libs",
+      "./assets"
     ],
     "qmodIncludeFiles": [],
     "qmodOutput": "./Qustom Menu.qmod",

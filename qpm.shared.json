@@ -30,7 +30,7 @@
         ],
         "qmod": [
           "pwsh ./scripts/build.ps1",
-          "pwsh ./scripts/createqmod.ps1"
+          "qpm qmod zip --skip_build"
         ],
         "restart": [
           "pwsh ./scripts/restart-game.ps1"
@@ -45,7 +45,8 @@
       "ndk": "^27.3.13750724",
       "qmodIncludeDirs": [
         "./build",
-        "./extern/libs"
+        "./extern/libs",
+        "./assets"
       ],
       "qmodIncludeFiles": [],
       "qmodOutput": "./Qustom Menu.qmod"

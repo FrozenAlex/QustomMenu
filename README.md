@@ -25,7 +25,7 @@ All images in the folder will be displayed as banners in the menu. Supported for
 Banners can be found in the [BSMG Discord](https://discord.gg/beatsabermods) in the `#banner` channel.
 
 If you want to make your own banners, here is the template:
-![Banner Template](https://github.com/jxnxsdev/QustomMenu/blob/36f86b12fbd859d3ddf97b97de49e0e0adfda176/default.png)
+![Banner Template](./assets/default.png)
 
 Use `qpm s build` to build
 Same goes for `qpm s copy` and `qpm s qmod`
