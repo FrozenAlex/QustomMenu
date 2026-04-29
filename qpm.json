@@ -1,11 +1,12 @@
 {
+  "$schema": "https://raw.githubusercontent.com/QuestPackageManager/QPM.Package/refs/heads/main/qpm.schema.json",
   "version": "0.1.0",
   "sharedDir": "shared",
   "dependenciesDir": "extern",
   "info": {
     "name": "Qustom Menu",
     "id": "qustommenu",
-    "version": "0.1.0",
+    "version": "1.0.3",
     "url": null,
     "additionalData": {
       "overrideSoName": "libqustommenu.so",
@@ -40,14 +41,14 @@
         "pwsh ./scripts/pull-tombstone.ps1"
       ]
     },
+    "ndk": "^27.3.13750724",
     "qmodIncludeDirs": [
       "./build",
       "./extern/libs",
       "./files"
     ],
     "qmodIncludeFiles": [],
-    "qmodOutput": "./QustomMenu.qmod",
-    "ndk": "^27.3.13750724"
+    "qmodOutput": "./QustomMenu.qmod"
   },
   "dependencies": [
     {
