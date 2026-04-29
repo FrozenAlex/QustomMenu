@@ -6,7 +6,7 @@
 #include "ModConfig.hpp"
 #include "UnityEngine/Vector3.hpp"
 #include "bsml/shared/BSML-Lite/Creation/Image.hpp"
-
+#include "assets.hpp"
 
 namespace CustomMenu::Banners {
     SafePtrUnity<BSML::FloatingScreen> leftBanner = nullptr;
@@ -49,11 +49,11 @@ namespace CustomMenu::Banners {
         UnityW<UnityEngine::Sprite> rightBannerSprite = CustomMenu::Banners::readFileAsSprite(rightBannerFile);
 
         if (!leftBannerSprite) {
-            leftBannerSprite = BSML::Lite::Base64ToSprite(Constants::base64ErrorSprite);
+            leftBannerSprite = BSML::Lite::ArrayToSprite(IncludedAssets::error_png);
         }
 
         if (!rightBannerSprite) {
-            rightBannerSprite = BSML::Lite::Base64ToSprite(Constants::base64ErrorSprite);
+            rightBannerSprite = BSML::Lite::ArrayToSprite(IncludedAssets::error_png);
         }
 
         HMUI::ImageView* leftBannerImage = BSML::Lite::CreateImage(leftBanner->get_transform(), leftBannerSprite, { 0, 0 }, leftBannerImageScale);

@@ -46,7 +46,7 @@
       "qmodIncludeDirs": [
         "./build",
         "./extern/libs",
-        "./assets"
+        "./files"
       ],
       "qmodIncludeFiles": [],
       "qmodOutput": "./QustomMenu.qmod"
