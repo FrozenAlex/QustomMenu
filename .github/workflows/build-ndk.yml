@@ -99,6 +99,13 @@ jobs:
         path: ./build/${{ steps.libname.outputs.NAME }}
         if-no-files-found: error
 
+    - name: Upload debug artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: debug_${{ steps.libname.outputs.NAME }}
+        path: ./build/debug_${{ steps.libname.outputs.NAME }}
+        if-no-files-found: error
+
     - name: Upload qmod artifact
       uses: actions/upload-artifact@v4
       with:
